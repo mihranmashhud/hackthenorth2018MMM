@@ -9,8 +9,17 @@ export default class ViewGrid extends Component {
         <Grid
           columns="repeat(auto-fit,minmax(300px,310px))"
           gap="15px"
-          justifyContent="center"
+          justifyContent="space-evenly"
         >
+          <Cell center>
+            <Showcase />
+          </Cell>
+          <Cell center>
+            <Showcase />
+          </Cell>
+          <Cell center>
+            <Showcase />
+          </Cell>
           <Cell center>
             <Showcase />
           </Cell>
