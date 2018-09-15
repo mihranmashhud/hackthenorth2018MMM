@@ -53,7 +53,8 @@ const FadeOnLoad = styled.div`
 `;
 
 const TtlDesc = styled.h1`
-  margin-top: 10px;
+  height: 100px;
+  width: 300px;
   font-size: large;
   text-align: left;
 `;
