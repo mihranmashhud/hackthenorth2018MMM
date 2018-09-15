@@ -9,6 +9,7 @@ import WebsiteImage from "./WebsiteImage";
 `;*/
 
 const FadeOnLoad = styled.div`
+    padding: 15px;
     font-size: medium;
     text-align: justify;
 
@@ -58,19 +59,16 @@ const TtlDesc = styled.h1`
 `;
 
 const FadedDesc = styled.p`
-
-height: 100px;
-width: 300px;
-margin-bottom: 5px;
-padding: 10px;
-max-height:200px;
-overflow:hidden;
-background: -webkit-linear-gradient(#000 60%, #fff);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
+  height: 80px;
+  width: 300px;
+  margin-bottom: 5px;
+  padding: 10px;
+  max-height: 100px;
+  overflow: hidden;
+  background: -webkit-linear-gradient(#000 50%, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
-
 
 export default class Showcase extends Component {
   render() {
