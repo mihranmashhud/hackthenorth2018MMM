@@ -5,11 +5,24 @@ export default class Navigation extends Component {
     return (
       <React.Fragment>
         <Navigation>
-          <Naviagation.Header>
+          <Navigation.Header>
             <Navigation.Brand>
-              <a href="#brand">Home Page</a>
+              <a href="#brand">Github Gallery</a>
             </Navigation.Brand>
-          </Naviagation.Header>
+          </Navigation.Header>
+          <Navigation.Collapse>
+            <Nav pullRight>
+              <NavItem eventKey={1} href="#">
+                +
+              </NavItem>
+              <NavItem eventKey={2} href="#">
+                Account
+              </NavItem>
+              <NavItem eventKey={3} href="#">
+                Login
+              </NavItem>
+            </Nav>
+          </Navigation.Collapse>
         </Navigation>
       </React.Fragment>
     );
