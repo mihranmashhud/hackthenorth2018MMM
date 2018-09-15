@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Title = styled.h1`
+/*const Title = styled.h1`
  margin-top: 10px;
   font-size: extra large;
   text-align: center;
-`;
+`;*/
 
 const FadeOnLoad = styled.div `
 
@@ -51,8 +51,10 @@ const FadeOnLoad = styled.div `
 
 `;
 
-const TtlDesc = styled.p`
-
+const TtlDesc = styled.h1`
+margin-top: 10px;
+  font-size: extra large;
+  text-align: center;
 `;
 
 const FadedDesc = styled.p`
@@ -63,13 +65,10 @@ export default class Showcase extends Component {
   render() {
     return (
       <React.Fragment>
-        <Title>
-          <TtlDesc>
-            The title goes here.
-          </TtlDesc>
-        </Title>
-    
         <FadeOnLoad>
+          <TtlDesc>
+            The Title Goes Here.
+          </TtlDesc>
           <FadedDesc>
             Exercitation reprehenderit velit Lorem in laboris elit adipisicing ex
             non ipsum culpa. Dolor consectetur aliqua culpa amet excepteur
