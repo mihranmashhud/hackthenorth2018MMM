@@ -51,6 +51,9 @@ export default class Showcase extends Component {
   render() {
     return (
       <React.Fragment>
+        <Title>
+          The title text goes here
+        </Title>
         <FadedDesc>
           Exercitation reprehenderit velit Lorem in laboris elit adipisicing ex
           non ipsum culpa. Dolor consectetur aliqua culpa amet excepteur
