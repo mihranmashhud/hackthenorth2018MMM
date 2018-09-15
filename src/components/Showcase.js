@@ -69,7 +69,7 @@ overflow:hidden;
 
 content: "";
 background: -webkit-linear-gradient(#000 70%, #fff);
-
+-webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 
 `;
