@@ -12,7 +12,7 @@ const FadeOnLoad = styled.div`
 
  margin-top: 25px;
     font-size: medium;
-    text-align: center;
+    text-align: justify;
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -54,8 +54,8 @@ const FadeOnLoad = styled.div`
 
 const TtlDesc = styled.h1`
   margin-top: 10px;
-  font-size: extra large;
-  text-align: center;
+  font-size: large;
+  text-align: left;
 `;
 
 const FadedDesc = styled.p`
