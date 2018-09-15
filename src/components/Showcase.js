@@ -57,18 +57,6 @@ export default class Showcase extends Component {
   render() {
     return (
       <React.Fragment>
-<<<<<<< HEAD
-        <Title>
-          The title text goes here
-        </Title>
-        <FadedDesc>
-          Exercitation reprehenderit velit Lorem in laboris elit adipisicing ex
-          non ipsum culpa. Dolor consectetur aliqua culpa amet excepteur
-          occaecat officia consectetur et. Cupidatat elit deserunt est irure
-          voluptate ut fugiat adipisicing anim irure excepteur sint. Qui
-          voluptate irure in in nostrud.
-        </FadedDesc>
-=======
         <FadeOnLoad>
           <FadedDesc>
             Exercitation reprehenderit velit Lorem in laboris elit adipisicing ex
@@ -78,7 +66,6 @@ export default class Showcase extends Component {
             voluptate irure in in nostrud.
           </FadedDesc>
         </FadeOnLoad>
->>>>>>> 26b6c08dca60259216410359c30ef8ebcb54b97f
       </React.Fragment>
     );
   }
