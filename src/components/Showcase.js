@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
+import WebsiteImage from "./WebsiteImage";
+
 const Title = styled.h1`
   height: 200px;
   width: 100%;
