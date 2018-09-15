@@ -58,7 +58,21 @@ const TtlDesc = styled.h1`
   text-align: center;
 `;
 
-const FadedDesc = styled.p``;
+const FadedDesc = styled.p`
+
+width: 300px;
+margin-bottom: 5px;
+padding-bottom: 5px;
+border-bottom: 3px solid #777;
+max-height:50px;
+overflow:hidden;
+text-overflow: ellipsis;
+content: "";
+background: -webkit-linear-gradient(#000, #fff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+`;
 
 export default class Showcase extends Component {
   render() {
