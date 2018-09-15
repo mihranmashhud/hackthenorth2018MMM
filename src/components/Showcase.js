@@ -9,8 +9,6 @@ import WebsiteImage from "./WebsiteImage";
 `;*/
 
 const FadeOnLoad = styled.div`
-
- margin-top: 25px;
     font-size: medium;
     text-align: justify;
 
@@ -53,10 +51,10 @@ const FadeOnLoad = styled.div`
 `;
 
 const TtlDesc = styled.h1`
-  height: 100px;
+  height: 10px;
   width: 300px;
   font-size: large;
-  text-align: left;
+  text-align: center;
 `;
 
 const FadedDesc = styled.p`
@@ -67,9 +65,7 @@ margin-bottom: 5px;
 padding: 10px;
 max-height:200px;
 overflow:hidden;
-
-content: "";
-background: -webkit-linear-gradient(#000 70%, #fff);
+background: -webkit-linear-gradient(#000 60%, #fff);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 
