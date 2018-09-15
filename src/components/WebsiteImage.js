@@ -15,13 +15,14 @@ const Image = styled.img`
   margin: 0;
   padding: 0;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export default class WebsiteImage extends Component {
   render() {
     return (
       <React.Fragment>
-<<<<<<< HEAD
         <Wrapper>
           <Image
             src={AddressBarSVG}
@@ -39,12 +40,6 @@ export default class WebsiteImage extends Component {
             alt="ScreenCapture"
           />
         </Wrapper>
-=======
-        <svg>
-          <image src={AddressBarSVG} x="0" y="0" width="580" height="44" />
-          <image src={ScreenCapture} x="0" y="44" width="580" height="435" />
-        </svg>
->>>>>>> d4a6c79ba475077415b3d1e14dbf13f8f69884f0
       </React.Fragment>
     );
   }
