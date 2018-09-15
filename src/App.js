@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Grid columns="repeat(auto-fit,minmax(300px,250px))">
-          <Cell>
+          <Cell center>
             <Showcase />
           </Cell>
         </Grid>

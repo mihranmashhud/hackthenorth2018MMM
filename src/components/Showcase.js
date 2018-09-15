@@ -76,9 +76,13 @@ export default class Showcase extends Component {
   render() {
     return (
       <React.Fragment>
-        <WebsiteImage />
         <FadeOnLoad>
-          <TtlDesc>The Title Goes Here.</TtlDesc>
+          <WebsiteImage />
+        </FadeOnLoad>
+
+        <TtlDesc>The Title Goes Here.</TtlDesc>
+
+        <FadeOnLoad>
           <FadedDesc>
             Exercitation reprehenderit velit Lorem in laboris elit adipisicing
             ex non ipsum culpa. Dolor consectetur aliqua culpa amet excepteur
