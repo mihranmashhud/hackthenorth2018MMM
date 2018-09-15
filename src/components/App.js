@@ -13,17 +13,23 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Navigation />
+        <React.Fragment>
+          <Navigation />
 
-        <hr />
+          <hr />
 
-        <Route exact path={routes.HOME} component={Home} />
+          <Route exact path={routes.HOME} component={Home} />
 
-        <Route exact path={routes.LOG_IN} component={LogIn} />
+          <Route exact path={routes.LOG_IN} component={LogIn} />
 
-        <Route exact path={routes.SIGN_UP} component={SignUp} />
+          <Route exact path={routes.SIGN_UP} component={SignUp} />
 
-        <Route exact path={routes.PASSWORD_FORGET} component={PasswordForget} />
+          <Route
+            exact
+            path={routes.PASSWORD_FORGET}
+            component={PasswordForget}
+          />
+        </React.Fragment>
       </Router>
     );
   }
