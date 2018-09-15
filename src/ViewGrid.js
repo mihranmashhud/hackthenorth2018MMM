@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Grid, Cell } from "styled-css-grid";
-import Showcase from "./components/Showcase";
+import Showcase from "./Showcase";
 
 class ViewGrid extends Component {
   render() {
     return (
       <React.Fragment>
-        <Grid columns="repeat(auto-fit,minmax(300px,250px))" gap="30px">
+        <Grid columns="repeat(auto-fit,minmax(300px,350px))" gap="30px">
           <Cell center>
             <Showcase />
           </Cell>
@@ -23,7 +23,7 @@ class ViewGrid extends Component {
             <Showcase />
           </Cell>
         </Grid>
-      </React.Fragment >
+      </React.Fragment>
     );
   }
 }
