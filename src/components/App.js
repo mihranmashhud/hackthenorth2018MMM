@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowseRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./Home";
 
 class App extends Component {

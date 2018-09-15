@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Grid, Cell } from "styled-css-grid";
-import Showcase from "./components/Showcase";
+import Showcase from "./Showcase";
 
-class ViewGrid extends Component {
+export default class ViewGrid extends Component {
   render() {
     return (
       <React.Fragment>
@@ -23,9 +23,7 @@ class ViewGrid extends Component {
             <Showcase />
           </Cell>
         </Grid>
-      </React.Fragment >
+      </React.Fragment>
     );
   }
 }
-
-export default App;
