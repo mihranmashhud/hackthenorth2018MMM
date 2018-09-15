@@ -12,7 +12,7 @@ const FadeOnLoad = styled.div`
 
  margin-top: 25px;
     font-size: medium;
-    text-align: center;
+    text-align: justify;
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -53,12 +53,28 @@ const FadeOnLoad = styled.div`
 `;
 
 const TtlDesc = styled.h1`
-  margin-top: 10px;
-  font-size: extra large;
-  text-align: center;
+  height: 100px;
+  width: 300px;
+  font-size: large;
+  text-align: left;
 `;
 
-const FadedDesc = styled.p``;
+const FadedDesc = styled.p`
+
+height: 100px;
+width: 300px;
+margin-bottom: 5px;
+padding: 10px;
+max-height:200px;
+overflow:hidden;
+
+content: "";
+background: -webkit-linear-gradient(#000 70%, #fff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+`;
+
 
 export default class Showcase extends Component {
   render() {
