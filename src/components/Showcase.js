@@ -9,7 +9,6 @@ import WebsiteImage from "./WebsiteImage";
 `;*/
 
 const FadeOnLoad = styled.div`
-    padding: 15px;
     font-size: medium;
     text-align: justify;
 

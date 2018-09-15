@@ -6,7 +6,11 @@ export default class ViewGrid extends Component {
   render() {
     return (
       <React.Fragment>
-        <Grid columns="repeat(auto-fit,minmax(300px,310px))" gap="15px">
+        <Grid
+          columns="repeat(auto-fit,minmax(300px,310px))"
+          gap="15px"
+          justifyContent="center"
+        >
           <Cell center>
             <Showcase />
           </Cell>
