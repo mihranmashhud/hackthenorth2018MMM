@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import styled from 'styled-components';
 
-export default class Title extends Component {
+export default class WebsiteImage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Title>This is the title</Title>
+          <
       </React.Fragment>
     )
   }
