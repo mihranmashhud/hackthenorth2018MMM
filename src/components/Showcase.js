@@ -64,12 +64,12 @@ height: 100px;
 width: 300px;
 margin-bottom: 5px;
 padding: 10px;
-max-height:50px;
+max-height:200px;
 overflow:hidden;
 
 content: "";
-background: -webkit-linear-gradient(#000, #fff);
--webkit-background-clip: text;
+background: -webkit-linear-gradient(#000 70%, #fff);
+
 -webkit-text-fill-color: transparent;
 
 `;
