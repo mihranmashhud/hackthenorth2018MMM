@@ -5,7 +5,7 @@ const Title = styled.h1`
  
 `;
 
-const FadeOnLoad = styled.body `
+const FadeOnLoad = styled.div `
 
  margin-top: 25px;
     font-size: 21px;
