@@ -10,6 +10,11 @@ import AddRepo from "./AddRepo";
 import * as routes from "../constants/routes";
 import { firebase } from "../firebase";
 
+const outAuthUser = authUser => {
+  console.log(authUser);
+  return authUser;
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -22,12 +27,10 @@ class App extends Component {
   componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
       if (!!authUser) {
-        this.setState(() => {
-          authUser;
-        });
+        this.setState(outAuthUser(authUser));
       } else {
-        this.setState(() => {
-          authUser: null;
+        this.setState({
+          authUser: null
         });
       }
     });
@@ -49,11 +52,11 @@ class App extends Component {
 
           {/* <Route exact path={routes.ADD_REPO} component={AddRepo} /> */}
 
-          <Route
+          {/*<Route
             exact
             path={routes.PASSWORD_FORGET}
             component={PasswordForget}
-          />
+          />*/}
         </React.Fragment>
       </Router>
     );
