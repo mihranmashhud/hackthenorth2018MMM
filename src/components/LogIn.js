@@ -5,7 +5,7 @@ export default class LogIn extends Component {
   render() {
     return (
       <React.Fragment>
-        <Gridcolumns={1}>
+        <Grid columns={1} justifyContent="" alignContent="center">
           <Cell />
         </Grid>
       </React.Fragment>
