@@ -15,22 +15,24 @@ export default class Navigation extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#home">Github Gallery</a>
+              <a href="/home">Github Gallery</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <NavItem eventKey={1} href="#signup">
+              <NavItem eventKey={1} href="/Account">
+                Account
+              </NavItem>
+              <NavItem eventKey={2} href="/SignUp">
                 Sign Up
               </NavItem>
-              <NavItem eventKey={2} href="#login">
+              <NavItem eventKey={3} href="/LogIn">
                 Login
               </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        ;
       </React.Fragment>
     );
   }
