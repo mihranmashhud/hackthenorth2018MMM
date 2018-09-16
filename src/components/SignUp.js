@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { auth } from "../firebase";
+import { auth } from "../firebase/index.js";
+import * as routes from "../constants/routes";
 
 const Wrapper = styled.div`
   padding: 60px 0;
@@ -11,14 +12,19 @@ const Form = styled.form`
   max-width: 320px;
 `;
 
+const INITIAL_STATE = {
+  email: "",
+  password: "",
+  passwordConfirmation: "",
+  error: null
+};
+
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: "",
-      password: "",
-      passwordConfirmation: ""
+      ...INITIAL_STATE
     };
   }
 
@@ -30,13 +36,6 @@ export default class SignUp extends Component {
     );
   }
 
-  signUp() {
-    auth.doCreateUserWithEmailAndPassword(
-      this.state.email,
-      this.state.password
-    );
-  }
-
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
@@ -44,6 +43,15 @@ export default class SignUp extends Component {
   };
 
   handleSubmit = event => {
+    const { username, email, password } = this.state;
+
+    auth
+      .doCreateUserWithEmailAndPassword(email, password)
+      .then(authUser => {
+        this.setState({ ...INITIAL_STATE });
+      })
+      .catch(error => error);
+
     event.preventDefault();
   };
 
