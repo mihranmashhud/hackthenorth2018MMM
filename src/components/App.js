@@ -6,15 +6,32 @@ import Home from "./Home";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import PasswordForget from "./PasswordForget";
-
+import AddRepo from "./AddRepo";
 import * as routes from "../constants/routes";
+import { firebase } from "../firebase";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      authUser: null
+    };
+  }
+
+  componentDidMount() {
+    firebase.auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState({ authUser })
+        : this.setState({ authUser: null });
+    });
+  }
+
   render() {
     return (
       <Router>
         <React.Fragment>
-          <Navigation />
+          <Navigation authUser={this.state.authUser} />
 
           <hr />
 
@@ -23,6 +40,8 @@ class App extends Component {
           <Route exact path={routes.LOG_IN} component={LogIn} />
 
           <Route exact path={routes.SIGN_UP} component={SignUp} />
+
+          <Route exact path={routes.ADD_REPO} component={AddRepo} />
 
           <Route
             exact
