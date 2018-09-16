@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import { auth } from "../../firebase/index";
+import { auth } from "../firebase";
 
 const Wrapper = styled.div`
   padding: 60px 0;
@@ -26,7 +26,7 @@ export default class SignUp extends Component {
     return (
       this.state.email.length > 0 &&
       this.state.password.length > 0 &&
-      this.state.password == this.state.passwordConfirmation
+      this.state.password === this.state.passwordConfirmation
     );
   }
 
