@@ -7,12 +7,15 @@ export default class LogIn extends Component {
   render() {
     return (
       <React.Fragment>
-        <label>
-          Username <input type="text" />
-        </label>
-        <label>
-          Password <input type="password" />
-        </label>
+        <Grid center>
+          <Cell center>
+            <form>
+              <label>
+                Username <input type = "text"/>
+              </label>
+            </form>
+          </Cell>
+        </Grid>
       </React.Fragment>
     );
   }
