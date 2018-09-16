@@ -9,10 +9,7 @@ const config = {
   storageBucket: "github-gallery.appspot.com",
   messagingSenderId: "363470626737"
 };
-
-if (!firebase.app.length) {
-  firebase.initializeApp(config);
-}
+firebase.initializeApp(config);
 
 const auth = firebase.auth();
 

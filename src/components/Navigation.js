@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   Navbar,
@@ -8,14 +9,20 @@ import {
   NavDropdown
 } from "react-bootstrap";
 
+import styled from "styled-components";
+
+const StyledLink = styled(Link)`
+  color: #ffffff;
+`;
+
 export default class Navigation extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar inverse collapseOnSelect color="blue">
+        <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/"> Github Gallery </a>{" "}
+              <StyledLink to="/"> Github Gallery </StyledLink>{" "}
             </Navbar.Brand>{" "}
             <Navbar.Toggle />
           </Navbar.Header>{" "}
