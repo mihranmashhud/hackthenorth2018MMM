@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { auth } from "../../firebase/index";
 
 const Wrapper = styled.div`
   padding: 60px 0;
@@ -22,7 +23,18 @@ export default class SignUp extends Component {
   }
 
   validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    return (
+      this.state.email.length > 0 &&
+      this.state.password.length > 0 &&
+      this.state.password == this.state.passwordConfirmation
+    );
+  }
+
+  signUp() {
+    auth.doCreateUserWithEmailAndPassword(
+      this.state.email,
+      this.state.password
+    );
   }
 
   handleChange = event => {
@@ -68,6 +80,7 @@ export default class SignUp extends Component {
             block
             bsSize="large"
             disabled={!this.validateForm()}
+            onClick={this.signUp()}
             type="submit">
             Sign Up
           </Button>
