@@ -19,10 +19,16 @@ const StyledLink = styled(Link)`
   color: white;
 `;
 
+const Corners = styled.div `
+
+background-color: black;
+`
+
 export default class Navigation extends Component {
   render() {
     return (
       <React.Fragment>
+        <Corners>
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
@@ -58,6 +64,7 @@ export default class Navigation extends Component {
             </Nav>{" "}
           </Navbar.Collapse>{" "}
         </Navbar>{" "}
+        </Corners>
       </React.Fragment>
     );
   }
