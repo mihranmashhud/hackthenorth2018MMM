@@ -7,10 +7,16 @@ import {
   MenuItem,
   NavDropdown
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { auth } from "../firebase";
+import styled from "styled-components";
 
 const Background = styled.div`
   background-color: black;
+`;
+
+const StyledLink = styled(Link)`
+  color: white;
 `;
 
 export default class Navigation extends Component {
@@ -52,31 +58,6 @@ export default class Navigation extends Component {
             </Nav>{" "}
           </Navbar.Collapse>{" "}
         </Navbar>{" "}
-=======
-        <Background>
-          <Navbar inverse collapseOnSelect>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <StyledLink to="/"> Github Gallery </StyledLink>{" "}
-              </Navbar.Brand>{" "}
-              <Navbar.Toggle />
-            </Navbar.Header>{" "}
-            <Navbar.Collapse>
-              <Nav pullRight>
-                <NavItem eventKey={1} href="/Account">
-                  Account{" "}
-                </NavItem>{" "}
-                <NavItem eventKey={2} href="/SignUp">
-                  Sign Up{" "}
-                </NavItem>{" "}
-                <NavItem eventKey={3} href="/LogIn">
-                  Login{" "}
-                </NavItem>{" "}
-              </Nav>{" "}
-            </Navbar.Collapse>{" "}
-          </Navbar>{" "}
-        </Background>
->>>>>>> 37f43d69893a26c49dd6ad53a823297273ceb9ee
       </React.Fragment>
     );
   }

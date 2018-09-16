@@ -51,7 +51,7 @@ class LogInForm extends Component {
         this.setState({ ...INITIAL_STATE });
         history.push(routes.HOME);
       })
-      .catch(error => error);
+      .catch(error => console.error);
     event.preventDefault();
   };
 
@@ -80,7 +80,8 @@ class LogInForm extends Component {
             block
             bsSize="large"
             disabled={!this.validateForm()}
-            type="submit">
+            type="submit"
+          >
             Log In
           </Button>
         </Form>

@@ -21,9 +21,15 @@ class App extends Component {
 
   componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
-      authUser
-        ? this.setState({ authUser })
-        : this.setState({ authUser: null });
+      if (!!authUser) {
+        this.setState(() => {
+          authUser;
+        });
+      } else {
+        this.setState(() => {
+          authUser: null;
+        });
+      }
     });
   }
 
@@ -41,7 +47,7 @@ class App extends Component {
 
           <Route exact path={routes.SIGN_UP} component={SignUp} />
 
-          <Route exact path={routes.ADD_REPO} component={AddRepo} />
+          {/* <Route exact path={routes.ADD_REPO} component={AddRepo} /> */}
 
           <Route
             exact
