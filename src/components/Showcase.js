@@ -55,6 +55,7 @@ const TtlDesc = styled.h1`
   width: 300px;
   font-size: large;
   text-align: center;
+  font-weight: bold;
 `;
 
 const FadedDesc = styled.p`
