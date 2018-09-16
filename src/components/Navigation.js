@@ -17,7 +17,6 @@ export default class Navigation extends Component {
   render() {
     return (
       <React.Fragment>
-<<<<<<< HEAD
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
