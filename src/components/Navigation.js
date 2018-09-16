@@ -15,7 +15,7 @@ export default class Navigation extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/home">Github Gallery</a>
+              <a href="/">Github Gallery</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
