@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import {
   Button,
   Navbar,
@@ -8,12 +7,7 @@ import {
   MenuItem,
   NavDropdown
 } from "react-bootstrap";
-
-import styled from "styled-components";
-
-const StyledLink = styled(Link)`
-  color: #ffffff;
-`;
+import { auth } from "../firebase";
 
 export default class Navigation extends Component {
   render() {
@@ -22,21 +16,35 @@ export default class Navigation extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <StyledLink to="/"> Github Gallery </StyledLink>{" "}
+              <a href="/"> Github Gallery </a>{" "}
             </Navbar.Brand>{" "}
             <Navbar.Toggle />
           </Navbar.Header>{" "}
           <Navbar.Collapse>
             <Nav pullRight>
-              <NavItem eventKey={1} href="/Account">
-                Account{" "}
-              </NavItem>{" "}
-              <NavItem eventKey={2} href="/SignUp">
-                Sign Up{" "}
-              </NavItem>{" "}
-              <NavItem eventKey={3} href="/LogIn">
-                Login{" "}
-              </NavItem>{" "}
+              {this.props.authUser ? (
+                <React.Fragment>
+                  <NavItem eventKey={1} href="/Account">
+                    Account{" "}
+                  </NavItem>{" "}
+                  <NavItem eventKey={2} onClick={auth.doSignOut()}>
+                    Sign Out{" "}
+                  </NavItem>{" "}
+                  <NavItem eventKey={3} href="/AddRepo">
+                    Add Repo{" "}
+                  </NavItem>{" "}
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <NavItem eventKey={4} href="/SignUp">
+                    Sign Up{" "}
+                  </NavItem>{" "}
+                  <NavItem eventKey={5} href="/LogIn">
+                    Log In{" "}
+                  </NavItem>{" "}
+                </React.Fragment>
+              )}{" "}
+              }
             </Nav>{" "}
           </Navbar.Collapse>{" "}
         </Navbar>{" "}

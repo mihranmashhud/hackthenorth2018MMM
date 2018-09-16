@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { auth } from "../firebase";
+import * as routes from "../constants/routes";
 
 const Wrapper = styled.div`
   padding: 60px 0;
@@ -11,22 +13,25 @@ const Form = styled.form`
   max-width: 320px;
 `;
 
-export default class SignUp extends Component {
+const INITIAL_STATE = {
+  email: "",
+  password: "",
+  error: null
+};
+
+const LogIn = ({ history }) => <LogInForm history={history} />;
+
+class LogInForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: "",
-      password: ""
+      ...INITIAL_STATE
     };
   }
 
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
-  }
-
-  signIn() {
-    auth.doSignInWithEmailAndPassword(this.state.email, this.state.password);
   }
 
   handleChange = event => {
@@ -36,6 +41,17 @@ export default class SignUp extends Component {
   };
 
   handleSubmit = event => {
+    const { email, password } = this.state;
+
+    const { history } = this.props;
+
+    auth
+      .doSignInWithEmailAndPassword(email, password)
+      .then(() => {
+        this.setState({ ...INITIAL_STATE });
+        history.push(routes.HOME);
+      })
+      .catch(error => error);
     event.preventDefault();
   };
 
@@ -64,12 +80,15 @@ export default class SignUp extends Component {
             block
             bsSize="large"
             disabled={!this.validateForm()}
-            onClick={this.signUp()}
             type="submit">
-            Sign Up
+            Log In
           </Button>
         </Form>
       </Wrapper>
     );
   }
 }
+
+export default withRouter(LogIn);
+
+export { LogInForm };
