@@ -12,7 +12,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar inverse collapseOnSelect>
+        <Navbar collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">Github Gallery</a>
