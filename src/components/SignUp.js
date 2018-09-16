@@ -16,7 +16,8 @@ export default class SignUp extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      passwordConfirmation: ""
     };
   }
 
@@ -49,6 +50,14 @@ export default class SignUp extends Component {
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
+            <FormControl
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
+            <ControlLabel>Confirm Password</ControlLabel>
             <FormControl
               value={this.state.password}
               onChange={this.handleChange}
