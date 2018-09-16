@@ -56,10 +56,10 @@ export default class SignUp extends Component {
               type="password"
             />
           </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
+          <FormGroup controlId="passwordConfirmation" bsSize="large">
             <ControlLabel>Confirm Password</ControlLabel>
             <FormControl
-              value={this.state.password}
+              value={this.state.passwordConfirmation}
               onChange={this.handleChange}
               type="password"
             />
@@ -69,7 +69,7 @@ export default class SignUp extends Component {
             bsSize="large"
             disabled={!this.validateForm()}
             type="submit">
-            Login
+            Sign Up
           </Button>
         </Form>
       </Wrapper>
